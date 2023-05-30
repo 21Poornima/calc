@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: cursive;
+            user-select: none;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+            background: url(./clr1.jpg) no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        .calculator{
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            width: 250px;
+            border: 3px solid #fff;
+            padding: 20px;
+            background: transparent;
+            backdrop-filter: blur(10px);
+            
+        }
+        #display{
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            font-size: 24px;
+            border: 3px solid #fff;
+            padding: 10px;
+            margin-bottom: 10px;
+            color: #fff;
+
+        }
+        .keys{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 10px;
+        }
+        button{
+            border-radius: 6px;
+            border: 2px solid #fff;
+            background-color: #fff;
+            padding: 5px;
+            cursor: pointer;
+            transition: all .2s ease-in-out;
+        }
+        button:hover{
+            background-color: black;
+            color: #fff;
+            transform: translateY(5px);
+        }
+        h1{
+            color: #fff;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+   <h1>CALCULATOR</h1>
+    <div class="calculator">
+        <div id="display" ></div>
+        <div class="keys">
+            <button id ="seven">7</button>
+            <button id ="eight">8</button>
+            <button id ="nine">9</button>
+            <button id ="plus">+</button>
+            <button id ="four">4</button>
+            <button id ="five">5</button>
+            <button id ="six">6</button>
+            <button id ="minus">-</button>
+            <button id ="one">1</button>
+            <button id ="two">2</button>
+            <button id ="three">3</button>
+            <button id ="mult">*</button>
+            <button id ="zero">0</button>
+            <button id ="dot">.</button>
+            <button id ="double">00</button>
+            <button id ="divi">/</button>
+            <button id="ac">AC</button>
+            <button id="del">del</button>
+            <button id ="add">enter</button>
+
+        </div>
+    </div>
+    <script>
+        let display = document.getElementById('display')
+
+        one.onclick = () => display.innerHTML += '1'
+        two.onclick = () => display.innerHTML += '2'
+        three.onclick = () => display.innerHTML += '3'
+
+        four.onclick = () => display.innerHTML += '4'
+        five.onclick = () => display.innerHTML += '5'
+        six.onclick = () => display.innerHTML += '6'
+
+        seven.onclick = () => display.innerHTML += '7'
+        eight.onclick = () => display.innerHTML += '8'
+        nine.onclick = () => display.innerHTML += '9'
+
+        zero.onclick = () => display.innerHTML += '0'
+        double.onclick = () => display.innerHTML += '00'
+        plus.onclick = () => display.innerHTML += '+'
+
+        minus.onclick = () => display.innerHTML += '-'
+        mult.onclick = () => display.innerHTML += '*'
+        divi.onclick = () => display.innerHTML += '/'
+
+        add.onclick = () => display.innerHTML = eval(display.innerHTML)
+        ac.onclick = () => display.innerHTML = ''
+        del.onclick = () => display.innerHTML = display.innerHTML.slice(0, -1)
+        dot.onclick = () => display.innerHTML += '.'
+
+
+    </script>
+</body>
+</html>
